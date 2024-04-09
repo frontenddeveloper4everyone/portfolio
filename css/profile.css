@@ -8,9 +8,44 @@ body{
     font-family: "Rubik" ,sans-serif;
     font-weight: 400;
     line-height: 1;
+    background-color: #fdf2e9;
+    
+    
 }
 html{
+    scroll-behavior: smooth;
     font-size:62.5%;
+/* overflow-x: hidden; */
+}
+.btn-mobile-nav{
+border: none;
+background: none;
+cursor: pointer;
+display: none ;
+}
+.icon-mobile-nav{
+   height: 4.8rem;
+   width: 4.8rem;
+   color: #333 ;  
+}
+.icon-mobile-nav[name="close-outline"]{
+    display: none;
+}
+/* STIKY NAVIGATON */
+.sticky.header{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 9999;
+    background-color:rgba(255,255,255,0.97);
+    box-shadow: rgba(0,0,0,0.03);
+}
+.sticky.section-hero{
+    margin-top: 9.6rem;
 }
 .header{
     display: flex;
@@ -20,10 +55,11 @@ html{
     height: 9.6rem;
     padding: 0 4.8rem;
 
-    /* to make stiky */
+
 }
 .logo{
     height: 6.2rem;
+    border-radius: 50%;
    
 }
 .main-nav-list{
@@ -50,8 +86,6 @@ html{
     letter-spacing: -0.5px;
     color: #333;
     font-weight: 700;
-}
-.heading-primary{
     font-size: 5.2rem;
     line-height: 1.01;
     margin-bottom: 3.2rem;
@@ -72,22 +106,25 @@ html{
 }
 .hero-img{
     width: 100%;
-    
-
+   
 }
 .hero-description,.bio-description{
     font-size: 2rem;
     line-height: 1.5;
     margin-bottom: 4.8rem;
 }
+.section-bio{
+    height: 100vh ;
+  
+}
 
 .btn:link ,.btn:visited {
     display: inline-flex;
-     padding: 1.6rem 3.2rem;
+    padding: 1.6rem 3.2rem;
     font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 0.9rem;
+    border-radius: 0.9rem ;
    transition:all 0.3s ;
 
 }
@@ -98,7 +135,7 @@ html{
 }
 .btn--full:hover,
 .btn--full:active{
-    background-color: #cf711f;
+ background-color: #cf711f;
     
 }
 .btn--outline:link,
@@ -109,7 +146,7 @@ html{
 .btn--outline:hover,
 .btn--outline:active {
     background-color: #fdf2e9;
-    /* border: 3px solid #fff; */
+   
     box-shadow: inset 0 0 3px #fff;
 }
 .margin-right-sm{
@@ -119,16 +156,17 @@ html{
 .container {
     max-width: 800rem;
     padding-left: 2rem;
-    background: #fdf2e9;
+    
 }
 
 .main-heading {
     text-align: center;
     color: #333;
-}
+} 
+
 .bio{
     display: flex;
-    background-color: #fff;
+    
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
@@ -152,12 +190,16 @@ html{
         line-height: 1.8;
         text-align: center;
         border-radius: 22px; 
-        background-color: #966d44;
+        background-color: #ded7d0;
+        padding: 1rem 1rem;
+        
        
  
 }
 .bio-description:hover{
-    background-color: #cf711f;
+    background-color: #fff;
+
+
 }
 
 .step-img{
@@ -173,16 +215,16 @@ html{
 .main{
     max-width: 800rem;
     padding-left: 2rem;
-    background: #fff; 
+     
 }
+
 .edu{
     display: flex;
-    background-color: #fff;
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
     margin-top: 6rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 .slide-row{
    display: flex;
@@ -203,8 +245,20 @@ html{
 }
 .school-photo img{
     height: 100%;
-border-radius: 10px;
+    border-radius: 10px;
 
+}
+.verfy{
+    width: 8rem;
+   height: 2rem;
+    color: #333;
+    font-weight: 500;
+    background-color: #84532c;
+    border-radius: 1rem;
+    align-items: center;
+}
+.verfy:hover{
+background-color: #e67e22;
 }
 .school-info{
     background: #2d3a59;
@@ -233,8 +287,8 @@ line-height: 24px;
     height: 40rem;
     position:relative;
     margin-top: 30rem;
-align-items: center;
-    transform: translate(30%,-30%);
+    align-items: center;
+    transform: translate(20%,-30%);
 
 
 }
@@ -265,7 +319,7 @@ align-items: center;
 /* Footer Styles */
 
 .footer {
-    background-color: #333;
+    background-color: #463131;
     color: #fff;
     padding: 3rem 0;
 }
@@ -274,13 +328,14 @@ align-items: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200rem;
+    margin: 0 2rem;
 }
 
 .footer-logo img {
-    width: 100px;
+    width: 6rem;
     height: auto;
+    border-radius: 50%;
 }
 
 .footer-links ul {
@@ -297,6 +352,8 @@ align-items: center;
 .footer-links ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 200;
 }
 
 .footer-social .social-link {
@@ -311,7 +368,91 @@ align-items: center;
 }
 
 .footer-bottom {
-    background-color: #222;
+  
     padding: 1rem 0;
     text-align: center;
+}
+.skill{
+/* background-color: dodgerblue; */
+min-height: 100vh;
+background-attachment:fixed;
+background-size: cover;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+.carousel{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    perspective: 100rem;
+}
+.carousel-cards{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    transform-style: preserve-3d;
+    transform: translateZ(-25rem);
+    transition: 0.3s ease-in;
+}
+.carousel_img{
+   width: 100%;
+   height: 100%;
+   display: inline-block; 
+
+}
+.carousel-card{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   border: 2px solid #fff; 
+   border-radius: 0.rem;
+   font-size: 3rem;
+   font-weight: 700;
+}
+.carousel-card:nth-child(1){
+    transform: rotateY(0deg) translateZ(25rem);
+}
+.carousel-card:nth-child(2){
+    transform: rotateY(45deg) translateZ(25rem);
+}
+.carousel-card:nth-child(3){
+    transform: rotateY(90deg) translateZ(25rem);
+}
+.carousel-card:nth-child(4){
+    transform: rotateY(135deg) translateZ(25rem);
+}
+.carousel-card:nth-child(5){
+    transform: rotateY(180deg) translateZ(25rem);
+}
+.carousel-card:nth-child(6){
+    transform: rotateY(225deg) translateZ(25rem);
+}
+.carousel-btn{
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: #00599c;
+    padding: 0.5em 1em;
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 2rem;
+    margin: 0 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carousel-btn:hover{
+transform: scale(1.04);
+background: #000;
+}
+a{
+display: inline-flex;
+    padding: 1.6rem 3.2rem;
+   font-size: 2rem;
+   font-weight: 600;
+   text-decoration: none;
+   color:#fdf2e9;
 }

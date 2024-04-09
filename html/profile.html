@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-5w3roVmyIa2nD4iCaOYsnxu37Np15+i99TQNVocnNjt9KpFV2lFpoFhTcbj5qg53YHdCyC+P1MQVJm/aGdHuBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../css/Profile.css" />
+    <link rel="stylesheet" href="../css/responsive.css">
 
   </head>
   <body>
-    <header class="header">
+    <header class="header nav-open ">
       <img src="../images/logo.png" class="logo" alt="logo" />
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -26,12 +27,19 @@
           <li>
             <a href="#educational-detail" class="main-nav-link">Educational Detail</a>
           </li>
+          <li>
+            <a href="#skills" class="main-nav-link">Skills</a>
+          </li>
         </ul>
       </nav>
+     <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon  class="icon-mobile-nav"  name="close-outline"></ion-icon>
+     </button>    
     </header>
     <main>
-      <section id="home" class="section-hero">
-        <div class="hero">
+      <section id="home" class="section-hero ">
+        <div class="hero " >
           <div class="hero-text-box">
             <h1 class="heading-primary">Bekalu Eshetie Geremew</h1>
             <p class="hero-description">
@@ -57,7 +65,7 @@
           </div>
         </div>
       </section>
-      <section >
+      <section  class="section-bio">
         <h1 class="main-heading heading-primary bio " id="bio">My Bio</h1>
         <div class=" grid grid-2-cols">
         <div  class=" main  ">
@@ -92,7 +100,8 @@
         </div>
       </div>
       </section>
-      <section class="educational-detail  ">
+      <section>
+        <div class="edu-details">
         <h1 class="edu-detail  heading-primary edu  " id="educational-detail">Educational Detail</h1>
        <div class="schooling">
         <div class="indicator">
@@ -105,7 +114,9 @@
         <div class="slide-row">
           <div class="slide-col">
             <div class="school-info">
-              <p>My primary school journey goes to Hamusit Primary school
+              <p> I learnt my primary education in Hamusit Primary school,which found in south Gondar.
+                and I successfully completed the reginal exam with best grades in 2009 E.C. 
+              </p>
                 <h3>Primary school</h3>
               </p>
             </div>
@@ -115,7 +126,10 @@
           </div>
           <div class="slide-col">
             <div class="school-info">
-              <p>My secondary school journey goes to Hamusit, GOH general secondary school
+              <p>My secondary school journey went to Hamusit.Hamusit GOH general secondary school.
+                also I accomplish grade 10 matric examnation with best grades in 2011 E.C. 
+
+              </p>
                 <h3>High school</h3>
               </p>
             </div>
@@ -125,7 +139,9 @@
           </div>
           <div class="slide-col">
             <div class="school-info">
-              <p>My preparatory school journey goes to Bahir Dar preparatory school
+              <p>I studied grade 11 and 12 in Bahir Dar. Bahir Dar preparatory school.
+                And finally I took university entrance exam with best score.
+              </p>
                 <h3>preparatory school</h3>
               </p>
             </div>
@@ -146,6 +162,43 @@
         </div>
       </div>
        </div>
+      </div>
+      </section>
+      <section>
+        <h1 class="main-heading heading-primary bio " id="skills">My Skills</h1>
+        <div class="skill">
+           <div class="carousel">
+            <div class="carousel-cards">
+            <div class="carousel-card">
+              <img class="carousel_img" src="../images/Coursera introduction to front end_page-0001.jpg" alt="my certeficate">
+            </div>
+            <div class="carousel-card">
+              <img class="carousel_img"  src="../images/Coursera mit html_page-0001.jpg" alt="certeficate">
+            </div>
+            <div class="carousel-card">
+              <img class="carousel_img" src="../images/Coursera html and css in depth_page-0001.jpg" alt="certeficate">
+            </div>
+            <div class="carousel-card">
+              <img class="carousel_img" src="../images/Coursera  js certeficate_page-0001.jpg" alt="certeficate">
+            </div>
+            <div class="carousel-card">
+              <img class="carousel_img" src="../images/Coursera version control _page-0001.jpg" alt="certeficate">
+            </div>
+            <div class="carousel-card">
+              <img class="carousel_img" src="../images/Coursera backend_page-0001.jpg" alt="certeficate">
+            </div>
+           </div>
+           <div class="carouse-control">
+            <button class="carousel-btn back"> &#8678;  Prev</button> 
+            <button class="carousel-btn next"> Next &#8680;  </button>
+          </div>
+          <div >
+            <a  class="verfy" href="https://coursera.org/verify/HSXT7AEUJNFH" target="_blank"><h6>Verfy</h6></a>
+          </div>
+          </div>
+          
+        </div>
+        </div>
       </section>
       <br>
       <section class="footer">
@@ -157,9 +210,9 @@
               <div class="footer-links">
                   <ul>
                       <li><a href="#home" id="home">Home</a></li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#portfolio">Portfolio</a></li>
-                      <li><a href="#contact">Contact</a></li>
+                      <li><a href="#bio">Bio</a></li>
+                      <li><a href="#educational-detail">Education</a></li>
+                      <li><a href="#skills">Skills</a></li>
                   </ul>
               </div>
               <div class="footer-social">
